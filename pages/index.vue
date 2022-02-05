@@ -1,11 +1,13 @@
 <script lang="ts" setup>
+const counter = ref<number>(0);
+
 onMounted(() => {
   console.log("Index page", "onMounted");
 });
 
-
 onActivated(() => {
-  console.log("Index page", "onActivated");
+  counter.value++;
+  console.log("Index page", "onActivated", counter.value);
 });
 
 definePageMeta({

@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+const counter = ref<number>(0);
+
 onMounted(() => {
   console.log("Third page", "onMounted");
 });
 
 onActivated(() => {
-  console.log("Third page", "onActivated");
+  counter.value++;
+  console.log("Third page", "onActivated", counter.value);
 });
 
 definePageMeta({

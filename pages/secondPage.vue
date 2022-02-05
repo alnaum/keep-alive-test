@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+const counter = ref<number>(0);
+
 onMounted(() => {
   console.log("Second page", "onMounted");
 });
 
 onActivated(() => {
-  console.log("Second page", "onActivated");
+  counter.value++;
+  console.log("Second page", "onActivated", counter.value);
 });
 
 definePageMeta({
@@ -15,7 +18,7 @@ definePageMeta({
 <template>
   <div>
     <h1>Second page</h1>
-    <NuxtLink to="/">indexPage</NuxtLink>
+    <NuxtLink to="/">IndexPage</NuxtLink>
     <span>&nbsp;|&nbsp;</span>
     <NuxtLink to="/thirdPage">ThirdPage</NuxtLink>
   </div>
