@@ -18,6 +18,7 @@ definePageMeta({
 <template>
   <div>
     <h1>Index page</h1>
+    <h3>Counter: {{ counter }}</h3>
     <NuxtLink to="/secondPage">SecondPage</NuxtLink>
     <span>&nbsp;|&nbsp;</span>
     <NuxtLink to="/thirdPage">ThirdPage</NuxtLink>
