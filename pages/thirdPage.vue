@@ -16,7 +16,7 @@ definePageMeta({
   <div>
     <h1>Third page</h1>
     <NuxtLink to="/">IndexPage</NuxtLink>
-    <span>&nbsp|&nbsp</span>
+    <span>&nbsp;|&nbsp;</span>
     <NuxtLink to="/secondPage">SecondPage</NuxtLink>
   </div>
 </template>
